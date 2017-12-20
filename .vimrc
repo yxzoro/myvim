@@ -17,6 +17,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'python-mode/python-mode'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'fatih/vim-go'
 Plugin 'jiangmiao/auto-pairs'
 
 
@@ -58,6 +61,23 @@ nmap ' <Plug>(easymotion-s)
 "must let terminal know 256 color when no $TERM=xterm-256color !
  set t_Co=256
 " let g:airline_theme='dark'
+
+"------------
+"python-mode:
+let g:pymode_folding = 0
+let g:jedi#popup_on_dot = 1
+let g:jedi#popup_select_first = 0
+let g:jedi#goto_definitions_command = "<leader>g"
+let g:jedi#documentation_command = "<leader>d"
+let g:jedi#usages_command = "<leader>u"
+
+
+"------------
+"go-mode:
+let g:go_def_mapping_enabled = 0
+au FileType go nmap <leader>g <Plug>(go-def-split)
+au FileType go nmap <leader>d <Plug>(go-doc)
+" no autocompletion when . pressed ? must press C-x C-o ? SHIT&FUCK...
 
 
 "-------------basic setting------------------
