@@ -92,5 +92,5 @@ nmap ' <Plug>(easymotion-s)
  set incsearch
  set showmatch
  set tabstop=4 shiftwidth=4 expandtab
-
+ set nowrap
 
